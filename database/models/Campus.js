@@ -20,7 +20,12 @@ const Campus = db.define("campus", {
 
   description: {
     type: Sequelize.STRING,
-  }
+  },
+
+  imageUrl: {
+    type: Sequelize.STRING,
+    defaultValue: "https://www.campuskit.org/admin/uploads/college-gallery/thumbs/photo-1607237138185-eedd9c632b0b1.jpg"
+  },
 });
 
 // Export the campus model
