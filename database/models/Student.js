@@ -27,13 +27,8 @@ const Student = db.define("student", {
     defaultValue: "https://upload.wikimedia.org/wikipedia/commons/7/7c/College_Textbooks.jpg"
   },
 
-  GPA: {
-    type: Sequelize.DECIMAL(10, 2),
-    allowNull: false,
-    validator: {
-      min: 0.0,
-      max: 4.0
-    }
+  gpa: {
+    type: Sequelize.DECIMAL(10,2)
   }
 });
 
