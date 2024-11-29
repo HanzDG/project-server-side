@@ -15,8 +15,33 @@ const Student = db.define("student", {
   lastname: {
     type: Sequelize.STRING,
     allowNull: false
+  },
+
+  email: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+
+  imageUrl: {
+    type: Sequelize.STRING,
+    defaultValue: "https://upload.wikimedia.org/wikipedia/commons/7/7c/College_Textbooks.jpg"
+  },
+
+  GPA: {
+    type: Sequelize.DECIMAL(10, 2),
+    allowNull: false,
+    validator: {
+      min: 0.0,
+      max: 4.0
+    }
   }
 });
 
 // Export the student model
 module.exports = Student;
+
+/*==================================================
+Needs to be implemented here 
+
+including data fields: first name, last name, email, image URL, and GPA.
+==================================================*/
